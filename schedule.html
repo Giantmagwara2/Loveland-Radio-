@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - Loveland Radio</title>
+  <meta name="description" content="Loveland Radio - Your favorite music and podcasts, live and on-demand. Tune in now!">
+<meta name="keywords" content="radio, music, live shows, podcasts, schedule, Loveland Radio">
+<meta name="author" content="Loveland Radio">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="Loveland Radio" />
+<meta property="og:description" content="Your favorite online radio station streaming live shows, podcasts, and more." />
+<meta property="og:image" content="path-to-image.jpg" />
+<meta property="og:url" content="https://www.lovelandradio.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Loveland Radio" />
+<meta name="twitter:description" content="Listen to live shows and podcasts on Loveland Radio." />
+<meta name="twitter:image" content="path-to-image.jpg" />
+  
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": { "background": "#000" },
+        "button": { "background": "#f1d600" }
+      },
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy-policy.html"
+      }
+    });
+  });
+</script>
+  
+  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=YOUR_PROPERTY_ID&product=inline-share-buttons"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <a href="/">Loveland Radio</a>
+  </div>
+
+  <!-- Hamburger Menu (visible on mobile) -->
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+  </div>
+
+  <!-- Navigation Menu -->
+  <div id="nav-menu" class="nav-menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/live">Live Radio</a></li>
+      <li><a href="/podcasts">Podcasts</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/advertise">Advertise</a></li>
+    </ul>
+  </div>
+    
+   <nav aria-label="Main Navigation">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/live">Live Radio</a></li>
+    <li><a href="/podcasts">Podcasts</a></li>
+    <li><a href="/schedule">Schedule</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/advertise">Advertise</a></li>
+  </ul>
+</nav>
+</header>
+
+  <main>
+    <section class="hero">
+      <h1>Broadcast Schedule</h1>
+      <p>Check out what’s playing on Loveland Radio.</p>
+    </section>
+
+    <section class="schedule">
+      <h2>Daily Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Show</th>
+            <th>Host</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>06:00 - 09:00</td>
+            <td>Morning Vibes</td>
+            <td>DJ Alex</td>
+          </tr>
+          <tr>
+            <td>09:00 - 12:00</td>
+            <td>The Mid-Morning Show</td>
+            <td>Sara Jones</td>
+          </tr>
+          <tr>
+            <td>12:00 - 15:00</td>
+            <td>Afternoon Delight</td>
+            <td>Mike Roberts</td>
+          </tr>
+          <tr>
+            <td>15:00 - 18:00</td>
+            <td>Drive Home</td>
+            <td>Rachel Green</td>
+          </tr>
+          <tr>
+            <td>18:00 - 21:00</td>
+            <td>Evening Chill</td>
+            <td>Chris Lane</td>
+          </tr>
+          <tr>
+            <td>21:00 - 00:00</td>
+            <td>Night Owls</td>
+            <td>DJ Night</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="weekly-schedule">
+      <h2>Weekly Highlights</h2>
+      <p>Stay tuned for our special shows:</p>
+      <ul>
+        <li>Monday: Motivational Mondays with Sara (9:00 AM - 12:00 PM)</li>
+        <li>Wednesday: Throwback Hits with DJ Alex (6:00 PM - 9:00 PM)</li>
+        <li>Friday: Weekend Kickoff with Mike (3:00 PM - 6:00 PM)</li>
+        <li>Sunday: Chill Sessions with Chris (8:00 PM - 10:00 PM)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
+  </footer>
+  
+  <!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to top" role="button">
+  ↑ Back to Top
+</button>
+</body>
+</html>
+
+<section class="schedule">
+  <h2>Today's Schedule</h2>
+  <div class="schedule-controls">
+    <input type="text" id="schedule-search" placeholder="Search shows..." />
+    <select id="schedule-filter">
+      <option value="all">All Shows</option>
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+    </select>
+  </div>
+  <div id="schedule-list">
+    <div class="schedule-item" data-time="morning">
+      <h3>Morning Vibes</h3>
+      <p>6:00 AM - 9:00 AM</p>
+    </div>
+    <div class="schedule-item" data-time="afternoon">
+      <h3>Afternoon Delight</h3>
+      <p>12:00 PM - 3:00 PM</p>
+    </div>
+    <div class="schedule-item" data-time="evening">
+      <h3>Evening Chill</h3>
+      <p>6:00 PM - 9:00 PM</p>
+    </div>
+  </div>
+</section>

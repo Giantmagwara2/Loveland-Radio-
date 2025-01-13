@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Loveland Radio</title>
+  <meta name="description" content="Loveland Radio - Your favorite music and podcasts, live and on-demand. Tune in now!">
+<meta name="keywords" content="radio, music, live shows, podcasts, schedule, Loveland Radio">
+<meta name="author" content="Loveland Radio">
+  <link rel="stylesheet" href="styles.css">
+  
+  <meta property="og:title" content="Loveland Radio" />
+<meta property="og:description" content="Your favorite online radio station streaming live shows, podcasts, and more." />
+<meta property="og:image" content="path-to-image.jpg" />
+<meta property="og:url" content="https://www.lovelandradio.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Loveland Radio" />
+<meta name="twitter:description" content="Listen to live shows and podcasts on Loveland Radio." />
+<meta name="twitter:image" content="path-to-image.jpg" />
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": { "background": "#000" },
+        "button": { "background": "#f1d600" }
+      },
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy-policy.html"
+      }
+    });
+  });
+</script>
+  
+  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=YOUR_PROPERTY_ID&product=inline-share-buttons"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+  <div class="logo">
+    <a href="/">Loveland Radio</a>
+  </div>
+
+  <!-- Hamburger Menu (visible on mobile) -->
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+  </div>
+
+  <!-- Navigation Menu -->
+  <div id="nav-menu" class="nav-menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/live">Live Radio</a></li>
+      <li><a href="/podcasts">Podcasts</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/advertise">Advertise</a></li>
+    </ul>
+  </div>
+    <nav aria-label="Main Navigation">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/live">Live Radio</a></li>
+    <li><a href="/podcasts">Podcasts</a></li>
+    <li><a href="/schedule">Schedule</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/advertise">Advertise</a></li>
+  </ul>
+</nav>
+</header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions, suggestions, or want to get in touch? We'd love to hear from you!</p>
+    
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form action="submit-form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <h3>Reach Us At:</h3>
+      <p>Email: support@lovelandradio.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 123 Radio Lane, Music City, World</p>
+    </div>
+  </section>
+
+  <!-- Optional Map -->
+  <section class="map">
+    <h3>Find Us Here:</h3>
+    <iframe 
+      <iframe src="map.html" loading="lazy"></iframe></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  
+  <!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to top" role="button">
+  ↑ Back to Top
+</button>
+</body>
+
+<form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Send</button>
+</form>
+</html>
