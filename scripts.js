@@ -176,7 +176,6 @@ document.getElementById('podcastSearch').addEventListener('input', function() {
     });
 });
 
-
 document.getElementById('loadMoreBtn').addEventListener('click', function() {
     // This can be used to load more content dynamically or append new podcast cards.
     let newPodcast = document.createElement('div');
