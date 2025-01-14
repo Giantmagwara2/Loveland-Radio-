@@ -1,158 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advertise with Loveland Radio</title>
-  <meta name="description" content="Loveland Radio - Your favorite music and podcasts, live and on-demand. Tune in now!">
-<meta name="keywords" content="radio, music, live shows, podcasts, schedule, Loveland Radio">
-<meta name="author" content="Loveland Radio">
-  <link rel="stylesheet" href="styles.css">
-  <meta property="og:title" content="Loveland Radio" />
-<meta property="og:description" content="Your favorite online radio station streaming live shows, podcasts, and more." />
-<meta property="og:image" content="path-to-image.jpg" />
-<meta property="og:url" content="https://www.lovelandradio.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Loveland Radio" />
-<meta name="twitter:description" content="Listen to live shows and podcasts on Loveland Radio." />
-<meta name="twitter:image" content="path-to-image.jpg" />
-  
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": { "background": "#000" },
-        "button": { "background": "#f1d600" }
-      },
-      "content": {
-        "message": "This website uses cookies to ensure you get the best experience on our website.",
-        "dismiss": "Got it!",
-        "link": "Learn more",
-        "href": "/privacy-policy.html"
-      }
-    });
-  });
-</script>
-  
-  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=YOUR_PROPERTY_ID&product=inline-share-buttons"></script>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loveland Radio - Advertise</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header>
-  <div class="logo">
-    <a href="/">Loveland Radio</a>
-  </div>
-
-  <!-- Hamburger Menu (visible on mobile) -->
-  <div class="hamburger-menu" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
-  </div>
-
-  <!-- Navigation Menu -->
-  <div id="nav-menu" class="nav-menu">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/live">Live Radio</a></li>
-      <li><a href="/podcasts">Podcasts</a></li>
-      <li><a href="/schedule">Schedule</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/advertise">Advertise</a></li>
-    </ul>
-  </div>
-    
-  <nav aria-label="Main Navigation">
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/live">Live Radio</a></li>
-    <li><a href="/podcasts">Podcasts</a></li>
-    <li><a href="/schedule">Schedule</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/advertise">Advertise</a></li>
-  </ul>
-</nav>
-</header>
-
-  <main>
-    <section class="hero">
-      <h1>Advertise with Us</h1>
-      <p>Reach thousands of engaged listeners daily with Loveland Radio.</p>
-    </section>
-
-    <section class="packages">
-      <h2>Sponsorship Packages</h2>
-      <div class="package">
-        <h3>Bronze Package</h3>
-        <p>Includes a 15-second ad played twice a day.</p>
-        <p>Price: $100/month</p>
-      </div>
-      <div class="package">
-        <h3>Silver Package</h3>
-        <p>Includes a 30-second ad played four times a day.</p>
-        <p>Price: $200/month</p>
-      </div>
-      <div class="package">
-        <h3>Gold Package</h3>
-        <p>Includes a 60-second ad played eight times a day and featured website banners.</p>
-        <p>Price: $500/month</p>
-      </div>
-    </section>
-
-    <section class="stats">
-      <h2>Our Reach</h2>
-      <p>Join our growing audience:</p>
-      <ul>
-        <li>Over 50,000 monthly listeners</li>
-        <li>Engaged local and international audience</li>
-        <li>Prime demographic: Ages 18-45</li>
-      </ul>
-    </section>
-
-    <section class="inquiry-form">
-      <h2>Get Started</h2>
-      <form action="submit-inquiry.php" method="post">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="package">Select Package</label>
-        <select id="package" name="package" required>
-          <option value="bronze">Bronze Package</option>
-          <option value="silver">Silver Package</option>
-          <option value="gold">Gold Package</option>
-        </select>
-        
-        <label for="message">Additional Details</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        
-        <button type="submit">Submit Inquiry</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-  </footer>
-  
-  <!-- Back to Top Button -->
-<button id="back-to-top" aria-label="Back to top" role="button">
-  ↑ Back to Top
-</button>
+    <header>
+        <div class="logo">
+            <h1>Loveland Radio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live-radio.html">Live Radio</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="advertise.html">Advertise</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="advertise">
+            <h2>Advertise with Us</h2>
+            <p>Reach a wide and engaged audience by advertising on Loveland Radio. We offer flexible packages to suit your needs and help you achieve your business goals.</p>
+            <div class="advertise-packages">
+                <div class="package">
+                    <h3>Basic Package</h3>
+                    <p>Includes a single ad slot during off-peak hours.</p>
+                    <p>Cost: $100/month</p>
+                </div>
+                <div class="package">
+                    <h3>Premium Package</h3>
+                    <p>Includes multiple ad slots during peak hours.</p>
+                    <p>Cost: $300/month</p>
+                </div>
+                <div class="package">
+                    <h3>Sponsorship Package</h3>
+                    <p>Includes exclusive sponsorship of a show.</p>
+                    <p>Cost: $1000/month</p>
+                </div>
+            </div>
+            <h3>Interested?</h3>
+            <form action="submit-form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
