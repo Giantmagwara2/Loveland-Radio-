@@ -151,3 +151,46 @@ backToTopButton.onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        let category = this.getAttribute('data-category');
+        document.querySelectorAll('.podcast-card').forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+document.getElementById('podcastSearch').addEventListener('input', function() {
+    let searchQuery = this.value.toLowerCase();
+    document.querySelectorAll('.podcast-card').forEach(card => {
+        let title = card.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(searchQuery)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+
+
+document.getElementById('loadMoreBtn').addEventListener('click', function() {
+    // This can be used to load more content dynamically or append new podcast cards.
+    let newPodcast = document.createElement('div');
+    newPodcast.classList.add('podcast-card');
+    newPodcast.innerHTML = `
+        <h3>New Podcast</h3>
+        <p>Description...</p>
+        <button>Play</button>
+    `;
+    document.querySelector('.podcast-grid').appendChild(newPodcast);
+});
+
+gtag('event', 'play', {
+    'event_category': 'Podcast',
+    'event_label': 'Morning Vibes',
+    'value': 1
+});
