@@ -25,11 +25,14 @@
     <main>
         <section class="live-radio">
             <h2>Listen Live</h2>
-            <audio controls>
-                <source src="stream-url.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <!-- Live365 Player Embed -->
+            <iframe src="https://live365.com/station/YourStationName" width="100%" height="150" frameborder="0" allow="autoplay"></iframe>
             <p>Now playing: <span id="now-playing">Loading...</span></p>
+        </section>
+        <section class="podcasts">
+            <h2>Our Podcasts</h2>
+            <!-- Podbean Podcast Player Embed -->
+            <iframe src="https://www.podbean.com/player-v2/?i=YourPodcastID&size=180&v=2" width="100%" height="100" frameborder="0" scrolling="no" allow="autoplay"></iframe>
         </section>
     </main>
     <footer>
