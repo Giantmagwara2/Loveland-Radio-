@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,5 +46,117 @@
         </ul>
     </footer>
     <script src="scripts/podcast-player.js"></script>
+</body>
+</html> html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcasts | Loveland Radio</title>
+  <meta name="description" content="Loveland Radio - Your favorite music and podcasts, live and on-demand. Tune in now!">
+<meta name="keywords" content="radio, music, live shows, podcasts, schedule, Loveland Radio">
+<meta name="author" content="Loveland Radio">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": { "background": "#000" },
+        "button": { "background": "#f1d600" }
+      },
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy-policy.html"
+      }
+    });
+  });
+</script>
+  
+  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=YOUR_PROPERTY_ID&product=inline-share-buttons"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+  <div class="logo">
+    <a href="/">Loveland Radio</a>
+  </div>
+
+  <!-- Hamburger Menu (visible on mobile) -->
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+  </div>
+
+  <!-- Navigation Menu -->
+  <div id="nav-menu" class="nav-menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/live">Live Radio</a></li>
+      <li><a href="/podcasts">Podcasts</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/advertise">Advertise</a></li>
+    </ul>
+  </div>
+</header>
+
+  <!-- Podcasts Section -->
+  <section class="podcasts">
+    <h2>Explore Our Podcasts</h2>
+    <div class="filters">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="music">Music</button>
+      <button class="filter-btn" data-category="talk">Talk Shows</button>
+      <button class="filter-btn" data-category="news">News</button>
+    </div>
+    <div class="podcast-grid">
+      <div class="podcast-card" data-category="music">
+        <img src="hero-image.jpg" alt="Hero Image" loading="lazy">
+        <h3>Morning Vibes</h3>
+        <p>A collection of uplifting music to start your day.</p>
+        <button class="play-btn">Play Episode</button>
+      </div>
+      <div class="podcast-card" data-category="talk">
+        <img src="hero-image.jpg" alt="Hero Image" loading="lazy">
+        <h3>Chat with Sarah</h3>
+        <p>In-depth discussions with special guests.</p>
+        <button class="play-btn">Play Episode</button>
+      </div>
+      <div class="podcast-card" data-category="news">
+        <img src="hero-image.jpg" alt="Hero Image" loading="lazy">
+        <h3>Daily News Wrap</h3>
+        <p>Stay updated with the latest headlines.</p>
+        <button class="play-btn">Play Episode</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
