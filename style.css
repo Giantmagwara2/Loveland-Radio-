@@ -766,3 +766,11 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray;
+}
