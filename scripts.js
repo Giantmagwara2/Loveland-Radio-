@@ -193,3 +193,9 @@ gtag('event', 'play', {
     'event_label': 'Morning Vibes',
     'value': 1
 });
+
+function changeQuality(streamUrl) {
+    const audioPlayer = document.getElementById('custom-player');
+    audioPlayer.src = streamUrl;
+    audioPlayer.play();
+}
