@@ -1037,3 +1037,10 @@ button:hover, .social-icons a img:hover {
 .podcast-player, .social-icons {
     animation: fadeIn 2s ease-out;
 }
+
+nav ul li a.active {
+    color: #007BFF; /* Example highlight color */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
