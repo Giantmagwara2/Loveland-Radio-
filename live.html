@@ -8,6 +8,7 @@
     <meta property="og:image" content="images/live-radio-thumbnail.jpg">
     <meta property="og:url" content="https://loveland-radio.netlify.app/live-radio.html">
     <title>Live Radio</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="live-radio.html" class="active">Live Radio</a></li>
+                <li><a href="live-radio.html" class="active" aria-current="page">Live Radio</a></li>
                 <li><a href="podcasts.html">Podcasts</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="advertising.html">Advertising</a></li>
@@ -29,9 +30,10 @@
     <section class="live-stream">
         <h2>Now Streaming</h2>
         <audio controls>
-            <source src="path-to-live-stream.mp3" type="audio/mp3">
+            <source src="audio/live-stream.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
+        <p>Stay tuned for the best music and talk shows, live on Loveland Radio.</p>
     </section>
 
     <!-- Footer Section -->
