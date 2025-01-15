@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loveland Radio - Live Radio</title>
-    <meta name="description" content="Listen live to Loveland Radio and enjoy your favorite music, shows, and more.">
-    <meta name="keywords" content="live radio, music, shows, Loveland Radio">
-    <meta name="author" content="Loveland Radio">
     <link rel="stylesheet" href="styles/style.css">
+    <meta property="og:title" content="Loveland Radio - Live Radio">
+    <meta property="og:description" content="Listen to live music and shows on Loveland Radio.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/live-radio.html">
 </head>
 <body>
-    <header class="sticky-header">
+    <header>
         <div class="logo">
-            <a href="index.html">Loveland Radio</a>
+            <h1>Loveland Radio</h1>
         </div>
         <nav>
             <ul>
@@ -27,24 +28,25 @@
     </header>
     <main>
         <section class="live-radio">
-            <h2>Now Streaming Live</h2>
-            <audio controls>
-                <source src="stream-url.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            <select id="audioQuality">
-                <option value="high">High Quality</option>
-                <option value="low">Low Quality</option>
-            </select>
+            <h2>Listen Live</h2>
+            <div id="player-container">
+                <audio id="custom-player" controls>
+                    <source src="streams/stream-high.mp3" type="audio/mpeg">
+                </audio>
+                <div class="quality-selector">
+                    <label for="audio-quality">Quality: </label>
+                    <select id="audio-quality" onchange="changeQuality(this.value)">
+                        <option value="streams/stream-high.mp3">High</option>
+                        <option value="streams/stream-medium.mp3">Medium</option>
+                        <option value="streams/stream-low.mp3">Low</option>
+                    </select>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
     </footer>
+    <script src="scripts/custom-player.js"></script>
 </body>
 </html>
