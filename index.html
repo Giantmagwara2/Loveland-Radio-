@@ -3,56 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Loveland Radio">
-    <meta property="og:description" content="Tune in for live radio and podcasts.">
-    <meta property="og:image" content="images/social-media-thumbnail.jpg">
-    <meta property="og:url" content="https://loveland-radio.netlify.app/index.html">
-    <title>Loveland Radio</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <title>My Website</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        nav ul li {
+            float: left;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        form label, form input, form textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Welcome to Loveland Radio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="live-radio.html">Live Radio</a></li>
-                <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertising.html">Advertising</a></li>
-            </ul>
-        </nav>
+        <h1>My Website</h1>
     </header>
-
-    <!-- Podcast Player Section -->
-    <section class="podcast-player">
-        <h2>Latest Podcast</h2>
-        <audio controls>
-            <source src="podcasts/latest-episode.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
-
-    <!-- Social Media Icons -->
-    <div class="social-icons">
-        <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
-            <img src="images/facebook-icon.png" alt="Facebook" width="32" height="32">
-        </a>
-        <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
-            <img src="images/twitter-icon.png" alt="Twitter" width="32" height="32">
-        </a>
-        <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
-            <img src="images/instagram-icon.png" alt="Instagram" width="32" height="32">
-        </a>
-    </div>
-
-    <!-- Footer Section -->
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Welcome to my website!</h2>
+        <p>This is the main content area of the website. You can customize it with your own content.</p>
+        
+        <!-- Form section -->
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    
     <footer>
-        <p>&copy; 2025 Loveland Radio</p>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
+    
+    <script>
+        // JavaScript code to handle form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Perform form validation (you can add more validation as needed)
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+            
+            // Simulate form submission (you can replace this with actual submission logic)
+            alert('Form submitted successfully!');
+            // Reset form fields
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
