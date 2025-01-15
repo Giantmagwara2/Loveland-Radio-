@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Live Radio - Loveland Radio">
-    <meta property="og:description" content="Tune in to our live radio broadcasts.">
-    <meta property="og:image" content="images/social-media-thumbnail.jpg">
+    <meta property="og:description" content="Stream live radio on Loveland Radio.">
+    <meta property="og:image" content="images/live-radio-thumbnail.jpg">
     <meta property="og:url" content="https://loveland-radio.netlify.app/live-radio.html">
-    <title>Live Radio - Loveland Radio</title>
+    <title>Live Radio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <h1>Live Radio</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="live-radio.html">Live Radio</a></li>
+                <li><a href="live-radio.html" class="active">Live Radio</a></li>
                 <li><a href="podcasts.html">Podcasts</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="advertising.html">Advertising</a></li>
@@ -26,40 +25,20 @@
         </nav>
     </header>
 
-    <!-- Audio Quality Selector -->
-    <select id="audio-quality" onchange="changeAudioQuality()">
-        <option value="128kbps">Low Quality (128kbps)</option>
-        <option value="256kbps">Medium Quality (256kbps)</option>
-        <option value="320kbps">High Quality (320kbps)</option>
-    </select>
-
-    <!-- Live Radio Stream -->
-    <audio id="audio-player" controls>
-        <source id="audio-source" src="path-to-live-radio-stream-128kbps.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Live Stream Section -->
+    <section class="live-stream">
+        <h2>Now Streaming</h2>
+        <audio controls>
+            <source src="path-to-live-stream.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Loveland Radio</p>
     </footer>
 
-    <script>
-        function changeAudioQuality() {
-            const quality = document.getElementById("audio-quality").value;
-            const audioSource = document.getElementById("audio-source");
-
-            if (quality === "128kbps") {
-                audioSource.src = "path-to-live-radio-stream-128kbps.mp3";
-            } else if (quality === "256kbps") {
-                audioSource.src = "path-to-live-radio-stream-256kbps.mp3";
-            } else if (quality === "320kbps") {
-                audioSource.src = "path-to-live-radio-stream-320kbps.mp3";
-            }
-
-            document.getElementById("audio-player").load();
-        }
-    </script>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
