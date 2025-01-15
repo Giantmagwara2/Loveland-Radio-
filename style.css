@@ -968,3 +968,27 @@ button:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
 }
+
+/* Button Hover Animation */
+button, .social-icons a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover, .social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Fade-In Animation for Content */
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply Fade-In to Specific Sections */
+.podcast-player, .social-icons {
+    animation: fadeIn 2s ease-out;
+}
