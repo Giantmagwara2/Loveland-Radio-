@@ -3,64 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Listen live to Loveland Radio and enjoy great music and podcasts.">
-    <meta name="keywords" content="radio, music, live, stream, Loveland Radio">
-    <meta name="author" content="Loveland Radio">
-    <meta property="og:title" content="Live Radio | Loveland Radio">
-    <meta property="og:description" content="Tune into Loveland Radio and enjoy music, podcasts, and live shows.">
-    <meta property="og:image" content="your-image-url.jpg">
+    <meta property="og:title" content="Live Radio - Loveland Radio">
+    <meta property="og:description" content="Listen to Loveland Radio live now.">
+    <meta property="og:image" content="images/live-radio-thumbnail.jpg">
     <meta property="og:url" content="https://loveland-radio.netlify.app/live-radio.html">
-    <title>Live Radio | Loveland Radio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Live Radio - Loveland Radio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <h1>Loveland Radio</h1>
-        </div>
+        <h1>Loveland Radio - Live Streaming</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="live-radio.html">Live Radio</a></li>
                 <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="advertising.html">Advertising</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="live-radio">
-            <h2>Listen Live to Loveland Radio</h2>
-            <audio id="audio-player" controls>
-                <source src="live-stream-url.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+    <!-- Live Stream Section -->
+    <section class="live-stream">
+        <h2>Listen to Us Live</h2>
+        <audio controls>
+            <source src="path-to-live-stream-url" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
 
-            <label for="quality-select">Choose Audio Quality:</label>
-            <select id="quality-select">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
+            <img src="images/facebook-icon.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+            <img src="images/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+            <img src="images/instagram-icon.png" alt="Instagram">
+        </a>
+    </div>
 
-            <div class="social-sharing">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://loveland-radio.netlify.app" target="_blank">Share on Facebook</a>
-                <a href="https://twitter.com/intent/tweet?url=https://loveland-radio.netlify.app" target="_blank">Share on Twitter</a>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+        <p>&copy; 2025 Loveland Radio</p>
     </footer>
 
-    <script src="scripts/live-radio.js"></script>
 </body>
 </html>
