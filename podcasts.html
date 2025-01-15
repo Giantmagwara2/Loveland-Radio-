@@ -3,44 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loveland Radio - Podcasts</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta property="og:title" content="Podcasts - Loveland Radio">
+    <meta property="og:description" content="Browse our collection of podcasts.">
+    <meta property="og:image" content="images/podcasts-thumbnail.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/podcasts.html">
+    <title>Podcasts - Loveland Radio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <h1>Loveland Radio</h1>
-        </div>
+        <h1>Loveland Radio Podcasts</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="live-radio.html">Live Radio</a></li>
                 <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="advertising.html">Advertising</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="podcasts">
-            <h2>Explore Podcasts</h2>
-            <input type="text" id="search-bar" placeholder="Search podcasts..." oninput="searchPodcasts()">
-            <div class="filters">
-                <button onclick="filterPodcasts('all')">All</button>
-                <button onclick="filterPodcasts('music')">Music</button>
-                <button onclick="filterPodcasts('talk')">Talk Shows</button>
-                <button onclick="filterPodcasts('news')">News</button>
-            </div>
-            <div id="podcast-list">
-                <!-- Podcasts will be dynamically loaded here -->
-            </div>
-            <button id="load-more" onclick="loadMore()">Load More</button>
-        </section>
-    </main>
+
+    <!-- Podcast List Section -->
+    <section class="podcast-list">
+        <h2>Latest Episodes</h2>
+        <div class="podcast-item">
+            <h3>Episode 1: The Power of Radio</h3>
+            <audio controls>
+                <source src="path-to-podcast-episode-1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <!-- Add more podcasts as needed -->
+        <button id="load-more">Load More</button>
+    </section>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
+            <img src="images/facebook-icon.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+            <img src="images/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+            <img src="images/instagram-icon.png" alt="Instagram">
+        </a>
+    </div>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
+        <p>&copy; 2025 Loveland Radio</p>
     </footer>
-    <script src="scripts/podcast-functions.js"></script>
+
+    <!-- Podcast Search Script -->
+    <script>
+        document.getElementById("load-more").addEventListener("click", function() {
+            alert("Load more podcasts feature coming soon!");
+        });
+    </script>
 </body>
 </html>
