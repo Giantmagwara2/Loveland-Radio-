@@ -786,3 +786,18 @@ header {
     max-width: 600px;
     margin: 0 auto;
 }
+
+:root {
+    --primary-color: #FF6F61; /* Coral */
+    --secondary-color: #B497BD; /* Lavender */
+    --accent-color: #F1C6C6; /* Soft Pink */
+    --background-color: #FFFFFF; /* White */
+    --text-color: #333333; /* Dark Gray */
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
