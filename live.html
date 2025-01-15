@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loveland Radio - Live Radio</title>
+    <meta name="description" content="Listen live to Loveland Radio and enjoy your favorite music, shows, and more.">
+    <meta name="keywords" content="live radio, music, shows, Loveland Radio">
+    <meta name="author" content="Loveland Radio">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <div class="logo">
-            <h1>Loveland Radio</h1>
+            <a href="index.html">Loveland Radio</a>
         </div>
         <nav>
             <ul>
@@ -24,15 +27,15 @@
     </header>
     <main>
         <section class="live-radio">
-            <h2>Listen Live</h2>
-            <!-- Live365 Player Embed -->
-            <iframe src="https://live365.com/station/YourStationName" width="100%" height="150" frameborder="0" allow="autoplay"></iframe>
-            <p>Now playing: <span id="now-playing">Loading...</span></p>
-        </section>
-        <section class="podcasts">
-            <h2>Our Podcasts</h2>
-            <!-- Podbean Podcast Player Embed -->
-            <iframe src="https://www.podbean.com/player-v2/?i=YourPodcastID&size=180&v=2" width="100%" height="100" frameborder="0" scrolling="no" allow="autoplay"></iframe>
+            <h2>Now Streaming Live</h2>
+            <audio controls>
+                <source src="stream-url.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <select id="audioQuality">
+                <option value="high">High Quality</option>
+                <option value="low">Low Quality</option>
+            </select>
         </section>
     </main>
     <footer>
@@ -43,6 +46,5 @@
             <li><a href="#">Instagram</a></li>
         </ul>
     </footer>
-    <script src="scripts/now-playing.js"></script>
 </body>
 </html>
