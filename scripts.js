@@ -199,3 +199,89 @@ function changeQuality(streamUrl) {
     audioPlayer.src = streamUrl;
     audioPlayer.play();
 }
+
+// Sample Podcast Data
+const podcasts = [
+    { title: "Podcast 1", description: "Description of Podcast 1" },
+    { title: "Podcast 2", description: "Description of Podcast 2" },
+    { title: "Podcast 3", description: "Description of Podcast 3" },
+];
+
+// Function to search podcasts
+function searchPodcasts() {
+    const query = document.getElementById("search-input").value.toLowerCase();
+    const results = podcasts.filter(podcast =>
+        podcast.title.toLowerCase().includes(query) ||
+        podcast.description.toLowerCase().includes(query)
+    );
+    
+    displayPodcasts(results);
+}
+
+// Function to display filtered podcasts
+function displayPodcasts(podcasts) {
+    const podcastList = document.getElementById("podcast-list");
+    podcastList.innerHTML = "";
+    podcasts.forEach(podcast => {
+        const podcastItem = document.createElement("li");
+        podcastItem.textContent = `${podcast.title}: ${podcast.description}`;
+        podcastList.appendChild(podcastItem);
+    });
+}
+
+// Initial call to display all podcasts
+displayPodcasts(podcasts);
+
+function changeAudioQuality() {
+    const quality = document.getElementById("audio-quality").value;
+    const audioSource = document.getElementById("audio-source");
+
+    // Change the audio source based on selected quality
+    if (quality === "128kbps") {
+        audioSource.src = "path-to-your-podcast-128kbps.mp3";
+    } else if (quality === "256kbps") {
+        audioSource.src = "path-to-your-podcast-256kbps.mp3";
+    } else if (quality === "320kbps") {
+        audioSource.src = "path-to-your-podcast-320kbps.mp3";
+    }
+
+    document.getElementById("audio-player").load();
+}
+
+let currentPodcastIndex = 0;
+const podcastsPerPage = 5;
+
+// Sample podcast data
+const podcasts = [
+    { title: "Podcast 1", description: "Description of Podcast 1" },
+    { title: "Podcast 2", description: "Description of Podcast 2" },
+    { title: "Podcast 3", description: "Description of Podcast 3" },
+    { title: "Podcast 4", description: "Description of Podcast 4" },
+    { title: "Podcast 5", description: "Description of Podcast 5" },
+    { title: "Podcast 6", description: "Description of Podcast 6" },
+    { title: "Podcast 7", description: "Description of Podcast 7" },
+];
+
+function loadMorePodcasts() {
+    const podcastList = document.getElementById("podcast-list");
+    
+    // Load next set of podcasts
+    const nextPodcasts = podcasts.slice(currentPodcastIndex, currentPodcastIndex + podcastsPerPage);
+    
+    nextPodcasts.forEach(podcast => {
+        const podcastItem = document.createElement("li");
+        podcastItem.textContent = `${podcast.title}: ${podcast.description}`;
+        podcastList.appendChild(podcastItem);
+    });
+
+    // Update the current index for the next "load more" click
+    currentPodcastIndex += podcastsPerPage;
+
+    // Hide button if no more podcasts to load
+    if (currentPodcastIndex >= podcasts.length) {
+        document.getElementById("load-more-btn").style.display = "none";
+    }
+}
+
+// Initially load some podcasts
+loadMorePodcasts();
