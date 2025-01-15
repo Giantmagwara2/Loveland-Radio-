@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Podcasts | Loveland Radio">
-    <meta property="og:description" content="Browse and listen to podcasts on various topics.">
+    <meta property="og:title" content="Podcasts - Loveland Radio">
+    <meta property="og:description" content="Explore our latest podcasts.">
     <meta property="og:image" content="images/social-media-thumbnail.jpg">
     <meta property="og:url" content="https://loveland-radio.netlify.app/podcasts.html">
     <title>Podcasts - Loveland Radio</title>
@@ -13,84 +13,96 @@
 <body>
 
     <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <h1>Welcome to Loveland Radio</h1>
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="live-radio.html">Live Radio</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="contact.html">Contact</a>
-                <a href="advertising.html">Advertising</a>
-            </nav>
-        </div>
+    <header>
+        <h1>Podcasts</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live-radio.html">Live Radio</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="advertising.html">Advertising</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Podcast Search and Filters -->
+    <!-- Podcast Search Section -->
     <section class="podcast-search">
-        <input type="text" id="search" placeholder="Search for podcasts..." onkeyup="searchPodcasts()">
-        <button onclick="searchPodcasts()">Search</button>
-        <select id="category" onchange="filterPodcasts()">
-            <option value="all">All Categories</option>
-            <option value="news">News</option>
-            <option value="music">Music</option>
-            <option value="comedy">Comedy</option>
-        </select>
+        <input type="text" id="search-input" placeholder="Search Podcasts" onkeyup="searchPodcasts()">
     </section>
 
-    <!-- Podcast List Section -->
-    <section class="podcast-list">
-        <div class="episode-item">
-            <img src="episode1.jpg" alt="Episode 1">
-            <h3>Episode Title 1</h3>
-            <p>Short description of the episode.</p>
-        </div>
-        <div class="episode-item">
-            <img src="episode2.jpg" alt="Episode 2">
-            <h3>Episode Title 2</h3>
-            <p>Short description of the episode.</p>
-        </div>
-        <div class="episode-item">
-            <img src="episode3.jpg" alt="Episode 3">
-            <h3>Episode Title 3</h3>
-            <p>Short description of the episode.</p>
-        </div>
-    </section>
+    <!-- Podcast List -->
+    <ul id="podcast-list">
+        <!-- Podcasts will be dynamically added here -->
+    </ul>
+
+    <!-- Load More Button -->
+    <button id="load-more-btn" onclick="loadMorePodcasts()">Load More Podcasts</button>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Loveland Radio</p>
     </footer>
 
-    <!-- JS Script for Search and Filter -->
     <script>
+        // Sample Podcast Data
+        const podcasts = [
+            { title: "Podcast 1", description: "Description of Podcast 1" },
+            { title: "Podcast 2", description: "Description of Podcast 2" },
+            { title: "Podcast 3", description: "Description of Podcast 3" },
+            { title: "Podcast 4", description: "Description of Podcast 4" },
+            { title: "Podcast 5", description: "Description of Podcast 5" },
+            { title: "Podcast 6", description: "Description of Podcast 6" },
+            { title: "Podcast 7", description: "Description of Podcast 7" },
+        ];
+
+        let currentPodcastIndex = 0;
+        const podcastsPerPage = 5;
+
         function searchPodcasts() {
-            const searchInput = document.getElementById('search').value.toLowerCase();
-            const podcasts = document.querySelectorAll('.episode-item');
-            podcasts.forEach(function(podcast) {
-                const title = podcast.querySelector('h3').textContent.toLowerCase();
-                const description = podcast.querySelector('p').textContent.toLowerCase();
-                if (title.includes(searchInput) || description.includes(searchInput)) {
-                    podcast.style.display = 'block';
-                } else {
-                    podcast.style.display = 'none';
-                }
+            const query = document.getElementById("search-input").value.toLowerCase();
+            const filteredPodcasts = podcasts.filter(podcast =>
+                podcast.title.toLowerCase().includes(query) ||
+                podcast.description.toLowerCase().includes(query)
+            );
+
+            displayPodcasts(filteredPodcasts);
+        }
+
+        function displayPodcasts(podcasts) {
+            const podcastList = document.getElementById("podcast-list");
+            podcastList.innerHTML = "";
+
+            podcasts.forEach(podcast => {
+                const podcastItem = document.createElement("li");
+                podcastItem.textContent = `${podcast.title}: ${podcast.description}`;
+                podcastList.appendChild(podcastItem);
             });
         }
 
-        function filterPodcasts() {
-            const selectedCategory = document.getElementById('category').value;
-            const podcasts = document.querySelectorAll('.episode-item');
-            podcasts.forEach(function(podcast) {
-                if (selectedCategory === 'all' || podcast.classList.contains(selectedCategory)) {
-                    podcast.style.display = 'block';
-                } else {
-                    podcast.style.display = 'none';
-                }
+        function loadMorePodcasts() {
+            const podcastList = document.getElementById("podcast-list");
+
+            // Load next set of podcasts
+            const nextPodcasts = podcasts.slice(currentPodcastIndex, currentPodcastIndex + podcastsPerPage);
+            
+            nextPodcasts.forEach(podcast => {
+                const podcastItem = document.createElement("li");
+                podcastItem.textContent = `${podcast.title}: ${podcast.description}`;
+                podcastList.appendChild(podcastItem);
             });
+
+            // Update the current index for the next "load more" click
+            currentPodcastIndex += podcastsPerPage;
+
+            // Hide button if no more podcasts to load
+            if (currentPodcastIndex >= podcasts.length) {
+                document.getElementById("load-more-btn").style.display = "none";
+            }
         }
+
+        // Initially load some podcasts
+        loadMorePodcasts();
     </script>
 
 </body>
