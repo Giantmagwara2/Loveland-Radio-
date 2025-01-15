@@ -3,66 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loveland Radio - Schedule</title>
-    <meta name="description" content="Check out the Loveland Radio schedule and never miss your favorite show.">
-    <meta name="keywords" content="schedule, radio shows, podcasts, Loveland Radio">
-    <meta name="author" content="Loveland Radio">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta property="og:title" content="Loveland Radio Schedule">
+    <meta property="og:description" content="Check out the Loveland Radio show schedule and never miss your favorite show!">
+    <meta property="og:image" content="images/social-media-thumbnail.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/schedule.html">
+    <title>Schedule | Loveland Radio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="sticky-header">
-        <div class="logo">
-            <a href="index.html">Loveland Radio</a>
-        </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Loveland Radio Schedule</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="live-radio.html">Live Radio</a></li>
                 <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertise.html">Advertise</a></li>
+                <li><a href="advertising.html">Advertising</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="schedule">
-            <h2>Our Weekly Schedule</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Time</th>
-                        <th>Show</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>6 AM - 9 AM</td>
-                        <td>Morning Vibes</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>8 PM - 10 PM</td>
-                        <td>Late Night Chill</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>12 PM - 1 PM</td>
-                        <td>Daily News Wrap</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+
+    <!-- Schedule Section -->
+    <section class="schedule">
+        <h2>Radio Show Schedule</h2>
+        <p>Here is our schedule of shows. Tune in and enjoy!</p>
+
+        <!-- Schedule Table -->
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Show</th>
+                    <th>Host</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Morning Vibes</td>
+                    <td>DJ Sam</td>
+                    <td>7:00 AM - 9:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Midday Talk</td>
+                    <td>Sarah</td>
+                    <td>12:00 PM - 2:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Throwback Tunes</td>
+                    <td>DJ Mike</td>
+                    <td>10:00 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Live Sessions</td>
+                    <td>Emma</td>
+                    <td>3:00 PM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Weekend Kickoff</td>
+                    <td>Luke</td>
+                    <td>5:00 PM - 7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Saturday Night Beats</td>
+                    <td>DJ Jazzy</td>
+                    <td>8:00 PM - 10:00 PM</td>
+                </tr>
+                <!-- Add more rows for each show -->
+            </tbody>
+        </table>
+
+        <!-- Special Events Section -->
+        <div class="special-events">
+            <h3>Special Events</h3>
+            <p>Don’t miss our special events:</p>
+            <ul>
+                <li><strong>Live Concert -</strong> Friday, 8:00 PM - 10:00 PM</li>
+                <li><strong>Guest Interview with Artist XYZ -</strong> Thursday, 1:00 PM - 2:00 PM</li>
+                <li><strong>Radio Marathon -</strong> Saturday, All Day Event</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+        <div class="social-links">
+            <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+                <img src="images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
     </footer>
+
 </body>
 </html>
