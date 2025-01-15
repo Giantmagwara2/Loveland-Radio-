@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loveland Radio - Advertise With Us</title>
-    <meta name="description" content="Advertise your business on Loveland Radio and reach a wide audience.">
-    <meta name="keywords" content="advertise, sponsorship, marketing, Loveland Radio">
-    <meta name="author" content="Loveland Radio">
-    <link rel="stylesheet" href="styles/style.css">
+    <meta property="og:title" content="Contact | Loveland Radio">
+    <meta property="og:description" content="Get in touch with Loveland Radio.">
+    <meta property="og:image" content="images/social-media-thumbnail.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/contact.html">
+    <title>Contact Us - Loveland Radio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="sticky-header">
-        <div class="logo">
-            <a href="index.html">Loveland Radio</a>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to Loveland Radio</h1>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="live-radio.html">Live Radio</a>
+                <a href="podcasts.html">Podcasts</a>
+                <a href="contact.html">Contact</a>
+                <a href="advertising.html">Advertising</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="live-radio.html">Live Radio</a></li>
-                <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertise.html">Advertise</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
-        <section class="advertise">
-            <h2>Advertise With Us</h2>
-            <p>Reach your target audience through Loveland Radio. Contact us for rates and options.</p>
-            <a href="contact.html" class="cta-button">Contact Us</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit-form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
