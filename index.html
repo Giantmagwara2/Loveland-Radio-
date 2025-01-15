@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loveland Radio - Homepage</title>
-    <meta name="description" content="Loveland Radio - Your favorite music and podcasts, live and on-demand. Tune in now!">
-    <meta name="keywords" content="radio, music, live shows, podcasts, schedule, Loveland Radio">
-    <meta name="author" content="Loveland Radio">
     <link rel="stylesheet" href="styles/style.css">
+    <meta property="og:title" content="Loveland Radio - Your #1 source for music and podcasts">
+    <meta property="og:description" content="Stream live radio and explore engaging podcasts on Loveland Radio.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-    <header class="sticky-header">
+    <header>
         <div class="logo">
-            <a href="index.html">Loveland Radio</a>
+            <h1>Loveland Radio</h1>
         </div>
         <nav>
             <ul>
@@ -30,27 +32,38 @@
             <h2>Welcome to Loveland Radio</h2>
             <p>Your #1 source for great music and podcasts.</p>
             <button onclick="window.location.href='live-radio.html';">Listen Live</button>
-            <button onclick="window.location.href='schedule.html';">View Schedule</button>
-        </section>
-        <section class="highlights">
-            <h3>Featured Shows</h3>
-            <div class="show">
-                <h4>The Morning Vibes</h4>
-                <p>Start your day with great energy.</p>
-            </div>
-            <div class="show">
-                <h4>Late Night Chill</h4>
-                <p>Relax with smooth tunes and deep conversations.</p>
-            </div>
+            <button onclick="window.location.href='podcasts.html';">Explore Podcasts</button>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+        <ul class="social-share">
+            <li><a href="#" onclick="shareOnSocial('facebook')">Facebook</a></li>
+            <li><a href="#" onclick="shareOnSocial('twitter')">Twitter</a></li>
+            <li><a href="#" onclick="shareOnSocial('linkedin')">LinkedIn</a></li>
         </ul>
     </footer>
+    <script src="scripts/custom-player.js"></script>
+    <script>
+        function shareOnSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Check out Loveland Radio!");
+            let shareUrl;
+            switch (platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/shareArticle?url=${url}&title=${text}`;
+                    break;
+                default:
+                    return;
+            }
+            window.open(shareUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
