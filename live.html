@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Live Radio | Loveland Radio">
-    <meta property="og:description" content="Listen to our live radio broadcast.">
+    <meta property="og:title" content="Live Radio - Loveland Radio">
+    <meta property="og:description" content="Tune in to our live radio broadcasts.">
     <meta property="og:image" content="images/social-media-thumbnail.jpg">
     <meta property="og:url" content="https://loveland-radio.netlify.app/live-radio.html">
     <title>Live Radio - Loveland Radio</title>
@@ -13,65 +13,52 @@
 <body>
 
     <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <h1>Welcome to Loveland Radio</h1>
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="live-radio.html">Live Radio</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="contact.html">Contact</a>
-                <a href="advertising.html">Advertising</a>
-            </nav>
-        </div>
+    <header>
+        <h1>Live Radio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live-radio.html">Live Radio</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="advertising.html">Advertising</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Live Radio Stream Section -->
-    <section class="live-radio">
-        <h2>Live Radio Broadcast</h2>
-        <audio controls autoplay>
-            <source src="path-to-your-live-radio-stream.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <!-- Audio Quality Selector -->
-        <div class="audio-quality-selector">
-            <label for="audio-quality">Choose Audio Quality:</label>
-            <select id="audio-quality">
-                <option value="low">Low Quality</option>
-                <option value="medium">Medium Quality</option>
-                <option value="high">High Quality</option>
-            </select>
-        </div>
-    </section>
+    <!-- Audio Quality Selector -->
+    <select id="audio-quality" onchange="changeAudioQuality()">
+        <option value="128kbps">Low Quality (128kbps)</option>
+        <option value="256kbps">Medium Quality (256kbps)</option>
+        <option value="320kbps">High Quality (320kbps)</option>
+    </select>
+
+    <!-- Live Radio Stream -->
+    <audio id="audio-player" controls>
+        <source id="audio-source" src="path-to-live-radio-stream-128kbps.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Loveland Radio</p>
     </footer>
 
-    <!-- JS Script for Audio Quality Selector -->
     <script>
-        const audio = document.querySelector('audio');
-        const qualitySelector = document.getElementById('audio-quality');
+        function changeAudioQuality() {
+            const quality = document.getElementById("audio-quality").value;
+            const audioSource = document.getElementById("audio-source");
 
-        qualitySelector.addEventListener('change', function() {
-            const quality = qualitySelector.value;
-            let audioSource = 'path-to-your-live-radio-stream.mp3';
-
-            // Adjust audio source based on selected quality
-            if (quality === 'low') {
-                audioSource = 'path-to-your-live-radio-stream-low.mp3';
-            } else if (quality === 'medium') {
-                audioSource = 'path-to-your-live-radio-stream-medium.mp3';
-            } else if (quality === 'high') {
-                audioSource = 'path-to-your-live-radio-stream-high.mp3';
+            if (quality === "128kbps") {
+                audioSource.src = "path-to-live-radio-stream-128kbps.mp3";
+            } else if (quality === "256kbps") {
+                audioSource.src = "path-to-live-radio-stream-256kbps.mp3";
+            } else if (quality === "320kbps") {
+                audioSource.src = "path-to-live-radio-stream-320kbps.mp3";
             }
 
-            audio.src = audioSource;
-            audio.play();
-        });
+            document.getElementById("audio-player").load();
+        }
     </script>
 
 </body>
