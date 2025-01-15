@@ -941,3 +941,30 @@ button:hover {
     font-size: 0.9em;
     color: var(--text-color);
 }
+
+/* Example hover effect */
+button:hover {
+    background-color: #ff9800;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Example hover effect for social media icons */
+.social-icons img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
