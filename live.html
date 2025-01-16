@@ -3,44 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Live Radio - Loveland Radio">
-    <meta property="og:description" content="Stream live radio on Loveland Radio.">
-    <meta property="og:image" content="images/live-radio-thumbnail.jpg">
-    <meta property="og:url" content="https://loveland-radio.netlify.app/live-radio.html">
-    <title>Live Radio</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Loveland Radio | Home">
+    <meta property="og:description" content="Welcome to Loveland Radio. Your source for live streaming, engaging podcasts, and the best music.">
+    <meta property="og:image" content="images/social-media-thumbnail.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/index.html">
+    <title>Loveland Radio | Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header .logo-link img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        /* Navigation Section */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #ff4500;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 30px;
+            background-color: #ff4500;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff4500;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            margin-top: 20px;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features ul li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .social-links img {
+            width: 24px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background-color: #ff4500;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Live Radio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="live-radio.html" class="active" aria-current="page">Live Radio</a></li>
-                <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertising.html">Advertising</a></li>
-            </ul>
-        </nav>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Loveland Radio Logo" class="logo">
+        </a>
+        <h1 class="site-title">Loveland Radio</h1>
     </header>
 
-    <!-- Live Stream Section -->
-    <section class="live-stream">
-        <h2>Now Streaming</h2>
-        <audio controls>
-            <source src="audio/live-stream.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <p>Stay tuned for the best music and talk shows, live on Loveland Radio.</p>
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="live-radio.html">Live Radio</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="advertising.html">Advertising</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Welcome to Loveland Radio</h2>
+        <p>Your home for live streaming, engaging podcasts, and the best music around the clock.</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <h2 class="section-title">Discover Loveland Radio</h2>
+        <p class="section-description">At Loveland Radio, we bring you an unmatched audio experience. Whether you’re tuning in to our live shows, catching up on podcasts, or exploring the latest in music, we’ve got something for everyone.</p>
+
+        <div class="features">
+            <h3>What We Offer:</h3>
+            <ul>
+                <li>🎵 Live Radio Streaming - Listen to your favorite tracks and DJs in real time.</li>
+                <li>🎙️ Podcasts - Dive into engaging conversations and stories.</li>
+                <li>📢 Advertising Opportunities - Partner with us to reach your audience.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="hero-section">
+        <h2>Join Our Community</h2>
+        <p>Follow us on social media and stay updated with the latest events, promotions, and shows.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+                <img src="images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Loveland Radio</p>
+        <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top">Back to Top</button>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
