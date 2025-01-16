@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <meta property="og:title" content="Loveland Radio | Home">
+    <meta property="og:description" content="Welcome to Loveland Radio. Your source for live streaming, engaging podcasts, and the best music.">
+    <meta property="og:image" content="images/social-media-thumbnail.jpg">
+    <meta property="og:url" content="https://loveland-radio.netlify.app/index.html">
+    <title>Loveland Radio | Home</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* CSS styles go here */
+        /* General Styles */
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        
+
+        /* Header Section */
         header {
             background-color: #f1f1f1;
             padding: 20px;
             text-align: center;
         }
-        
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #ff4500;
+        }
+
+        header .logo-link img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        /* Navigation Section */
         nav ul {
             list-style-type: none;
             margin: 0;
@@ -25,107 +45,170 @@
             overflow: hidden;
             background-color: #333;
         }
-        
+
         nav ul li {
             float: left;
         }
-        
+
         nav ul li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        
-        main {
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #ff4500;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 30px;
+            background-color: #ff4500;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Content Section */
+        .content-section {
             padding: 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 800px;
         }
-        
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff4500;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features ul li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .features ul li:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Social Links */
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-links img {
+            width: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
         footer {
             background-color: #f1f1f1;
             padding: 20px;
             text-align: center;
         }
-        
-        form {
-            margin-top: 20px;
-        }
-        
-        form label, form input, form textarea {
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        form input[type="submit"] {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>My Website</h1>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Loveland Radio Logo" class="logo">
+        </a>
+        <h1 class="site-title">Loveland Radio Station</h1>
     </header>
-    
+
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="live-radio.html">Live Radio</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="advertising.html">Advertising</a></li>
         </ul>
     </nav>
-    
-    <main>
-        <h2>Welcome to my website!</h2>
-        <p>This is the main content area of the website. You can customize it with your own content.</p>
-        
-        <!-- Form section -->
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <input type="submit" value="Submit">
-        </form>
-    </main>
-    
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Welcome to Loveland Radio Station</h2>
+        <p>Your home for live streaming, engaging podcasts, and the best music around the clock.</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <h2 class="section-title">Discover Loveland Radio</h2>
+        <p class="section-description">At Loveland Radio, we bring you an unmatched audio experience. Whether you’re tuning in to our live shows, catching up on podcasts, or exploring the latest in music, we’ve got something for everyone.</p>
+        <div class="features">
+            <h3>What We Offer:</h3>
+            <ul>
+                <li>🎵 <strong>Live Radio Streaming</strong> - Listen to your favorite tracks and DJs in real time.</li>
+                <li>🎙️ <strong>Podcasts</strong> - Dive into engaging conversations and stories.</li>
+                <li>📢 <strong>Advertising Opportunities</strong> - Partner with us to reach your audience.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="hero-section">
+        <h2>Join Our Community</h2>
+        <p>Follow us on social media and stay updated with the latest events, promotions, and shows.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+                <img src="images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
+        <p>&copy; 2025 Loveland Radio. All rights reserved.</p>
     </footer>
-    
-    <script>
-        // JavaScript code to handle form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Perform form validation (you can add more validation as needed)
-            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                alert('Please fill in all fields.');
-                return;
-            }
-            
-            // Simulate form submission (you can replace this with actual submission logic)
-            alert('Form submitted successfully!');
-            // Reset form fields
-            contactForm.reset();
-        });
-    </script>
 </body>
 </html>
