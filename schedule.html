@@ -3,96 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Loveland Radio Schedule">
-    <meta property="og:description" content="Check out the Loveland Radio show schedule and never miss your favorite show!">
+    <meta property="og:title" content="Advertise with Loveland Radio">
+    <meta property="og:description" content="Advertise your business on Loveland Radio and reach a wide audience.">
     <meta property="og:image" content="images/social-media-thumbnail.jpg">
-    <meta property="og:url" content="https://loveland-radio.netlify.app/schedule.html">
-    <title>Schedule | Loveland Radio</title>
+    <meta property="og:url" content="https://loveland-radio.netlify.app/advertising.html">
+    <title>Advertising | Loveland Radio</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header .logo-link img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        /* Navigation Section */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #ff4500;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 30px;
+            background-color: #ff4500;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section h2 {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Content Section */
+        .advertising-info {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            max-width: 800px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff4500;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .pricing-table .package {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-table .package:hover {
+            transform: scale(1.05);
+        }
+
+        .pricing-table .package h4 {
+            color: #ff4500;
+            margin-bottom: 15px;
+        }
+
+        .pricing-table .package p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        /* Contact Form */
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #333;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .social-links img {
+            width: 24px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
-        <h1>Loveland Radio Schedule</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="live-radio.html">Live Radio</a></li>
-                <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="advertising.html">Advertising</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-            </ul>
-        </nav>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Loveland Radio Logo" class="logo">
+        </a>
+        <h1>Advertise with Loveland Radio</h1>
     </header>
 
-    <!-- Schedule Section -->
-    <section class="schedule">
-        <h2>Radio Show Schedule</h2>
-        <p>Here is our schedule of shows. Tune in and enjoy!</p>
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="live-radio.html">Live Radio</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="advertising.html" class="active">Advertising</a></li>
+        </ul>
+    </nav>
 
-        <!-- Schedule Table -->
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Show</th>
-                    <th>Host</th>
-                    <th>Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>Morning Vibes</td>
-                    <td>DJ Sam</td>
-                    <td>7:00 AM - 9:00 AM</td>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>Midday Talk</td>
-                    <td>Sarah</td>
-                    <td>12:00 PM - 2:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>Throwback Tunes</td>
-                    <td>DJ Mike</td>
-                    <td>10:00 AM - 12:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>Live Sessions</td>
-                    <td>Emma</td>
-                    <td>3:00 PM - 5:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>Weekend Kickoff</td>
-                    <td>Luke</td>
-                    <td>5:00 PM - 7:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>Saturday Night Beats</td>
-                    <td>DJ Jazzy</td>
-                    <td>8:00 PM - 10:00 PM</td>
-                </tr>
-                <!-- Add more rows for each show -->
-            </tbody>
-        </table>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Advertise with Us</h2>
+        <p>Get your business heard by thousands of listeners worldwide.</p>
+    </section>
 
-        <!-- Special Events Section -->
-        <div class="special-events">
-            <h3>Special Events</h3>
-            <p>Don’t miss our special events:</p>
-            <ul>
-                <li><strong>Live Concert -</strong> Friday, 8:00 PM - 10:00 PM</li>
-                <li><strong>Guest Interview with Artist XYZ -</strong> Thursday, 1:00 PM - 2:00 PM</li>
-                <li><strong>Radio Marathon -</strong> Saturday, All Day Event</li>
-            </ul>
+    <!-- Advertising Information Section -->
+    <section class="advertising-info">
+        <h2 class="section-title">Reach a Wide Audience</h2>
+        <p class="section-description">Advertise your business on Loveland Radio and get your message out to thousands of listeners worldwide. Whether it's for a new product launch, an event, or brand awareness, our platform offers a diverse audience eager to engage with your brand.</p>
+
+        <h3 class="section-title">Our Audience</h3>
+        <ul>
+            <li>Thousands of active listeners</li>
+            <li>Engaged podcast audience</li>
+            <li>Targeted listeners based on interests</li>
+        </ul>
+
+        <h3 class="section-title">Advertisement Packages</h3>
+        <div class="pricing-table">
+            <div class="package">
+                <h4>Basic Package</h4>
+                <p>Get your ad played during our live shows.</p>
+                <p>Price: $100 per week</p>
+            </div>
+            <div class="package">
+                <h4>Premium Package</h4>
+                <p>Your ad will be featured during our live radio and podcast episodes.</p>
+                <p>Price: $250 per week</p>
+            </div>
+            <div class="package">
+                <h4>Exclusive Package</h4>
+                <p>Full-featured ad campaign with multiple placements and special mentions during events.</p>
+                <p>Price: $500 per week</p>
+            </div>
         </div>
+
+        <h3 class="section-title">Get in Touch</h3>
+        <p>If you're interested in advertising with us or have any questions, feel free to reach out using the contact form below.</p>
+
+        <!-- Contact Form for Advertising Inquiries -->
+        <form action="submit-advertising-inquiry.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+
+            <!-- Honeypot Field -->
+            <input type="text" name="_honeypot" style="display:none">
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
     </section>
 
     <!-- Footer Section -->
@@ -110,6 +278,5 @@
             </a>
         </div>
     </footer>
-
 </body>
 </html>
